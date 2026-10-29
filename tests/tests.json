@@ -10,18 +10,21 @@
       "WhatsApp handoff",
       "original logo without RC",
       "three category scope",
-      "registered summary locked"
+      "registered summary locked",
+      "whole-card click opens enquiry",
+      "gold active background remains after closing enquiry"
     ],
     "description": "Registers a gadget purchase enquiry and prepares WhatsApp.",
     "steps": [
       "Confirm the original gold-and-black Santi Willz Services logo is visible without an RC line and only three service categories appear",
-      "Select Start enquiry for Gadgets",
+      "Click the empty area of the Gadgets card (not the button) and confirm the existing enquiry dialog opens",
+      "Close the dialogue and confirm Gadgets remains gold, then reopen using its Start enquiry button",
       "Choose Buy a gadget and complete model, specifications and budget",
       "Complete customer name, WhatsApp and location",
       "Register & open WhatsApp",
       "Return to the website if a WhatsApp tab opens; verify Back is hidden after registration and Open WhatsApp remains available"
     ],
-    "expected": "A unique SWS reference appears and WhatsApp opens with the order summary."
+    "expected": "A Gadgets card click highlights it gold and opens the original guided enquiry. A unique SWS reference appears and WhatsApp opens with the order summary."
   },
   {
     "name": "Automobile mobile enquiry",
@@ -30,16 +33,21 @@
       "automobile category",
       "mobile guided questions",
       "order registration",
-      "mobile header original logo fully visible and proportional"
+      "mobile header original logo fully visible and proportional",
+      "mobile gold selection state",
+      "exclusive service-card highlight",
+      "service button click"
     ],
     "description": "Automobile sourcing uses automobile-specific questions.",
     "steps": [
       "At mobile width, verify the full Santi Willz Services logo is visible, centered vertically, and not compressed or clipped by the WhatsApp link",
-      "Select Automobile",
+      "Tap the Automobile card background, close the opened enquiry and confirm that its background is gold",
+      "Tap the Technical Support card background, close its enquiry, and confirm it is now gold while Automobile returns to white",
+      "Select the Start enquiry button for Automobile",
       "Choose Source a vehicle and answer three questions",
       "Complete contact details and register"
     ],
-    "expected": "A saved order reference is displayed and WhatsApp handoff is offered. The full original logo is legible without distortion or clipping in the mobile header."
+    "expected": "On mobile the selected service card stays gold until a different service is selected. Automobile registration still displays an order reference and WhatsApp handoff, and the original logo remains fully legible."
   },
   {
     "name": "Required answers guardrail",
