@@ -184,6 +184,11 @@ document
   .querySelectorAll<HTMLButtonElement>('[data-category]')
   .forEach(button =>
     button.addEventListener('click', () => {
+      const selectedCard = button.closest<HTMLElement>('.cards article');
+      document.querySelectorAll<HTMLElement>('.cards article').forEach(card => {
+        card.classList.toggle('is-active', card === selectedCard);
+      });
+
       category = button.dataset.category as Category;
       step = 0;
       requestType = '';
@@ -195,6 +200,14 @@ document
       modal.showModal();
     })
   );
+
+// The whole card opens the same enquiry flow as its accessible action button.
+document.querySelectorAll<HTMLElement>('.cards article').forEach(card => {
+  card.addEventListener('click', event => {
+    if ((event.target as HTMLElement).closest('button')) return;
+    card.querySelector<HTMLButtonElement>('[data-category]')?.click();
+  });
+});
 document.querySelector('#exit')!.addEventListener('click', () => modal.close());
 back.addEventListener('click', () => {
   if (next.disabled || completedUrl) return;
