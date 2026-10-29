@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Santi Willz Services | Gadgets, Automobile & Technical Support
+    </title>
+    <meta name="description" content="Gadgets, automobile enquiries, technical support and installation in Aba. Register your enquiry and continue with Santi Willz Services on WhatsApp." />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="shell nav">
+          <div class="brand">
+            <a class="logo-crop" href="#" aria-label="Santi Willz Services home"><img src="./resources/original-logo.png" alt="Santi Willz Services" width="580" height="360" /></a>
+          </div>
+          <nav>
+            <a href="#services">Services</a><a href="#process">How it works</a>
+          </nav>
+          <a class="wa" href="https://wa.me/2348051816985">WhatsApp ↗</a>
+        </div>
+      </header>
+      <main>
+        <section class="hero shell">
+          <div class="eyebrow">GADGETS · AUTOMOBILE · TECHNICAL SUPPORT</div>
+          <h1>Real solutions.<br /><em>Real satisfaction.</em></h1>
+          <p>
+            Tell us what you need. Our guided enquiry will ask the right
+            questions, register your request and prepare a WhatsApp message for
+            our team.
+          </p>
+          <a class="primary" href="#services"
+            >Explore our services <span>↗</span></a
+          >
+          <div class="chips">
+            <span>Based in Aba, Nigeria</span><span>Simple guided orders</span
+            ><span>Direct WhatsApp handoff</span>
+          </div>
+          <div class="decor d1">✦</div>
+          <div class="decor d2">✧</div>
+        </section>
+        <section id="services" class="shell services">
+          <div class="eyebrow">WHAT CAN WE HELP YOU WITH?</div>
+          <h2>Choose your service</h2>
+          <div class="cards">
+            <article>
+              <div class="visual">📱</div>
+              <div class="num">01 / GADGETS</div>
+              <h3>Gadgets</h3>
+              <p>Buy gadgets, request accessories, repairs or upgrades.</p>
+              <button data-category="gadgets">
+                Start enquiry <span>↗</span>
+              </button>
+            </article>
+            <article>
+              <div class="visual">🚘</div>
+              <div class="num">02 / AUTOMOBILE</div>
+              <h3>Automobile</h3>
+              <p>Vehicle sourcing, purchase enquiries and related services.</p>
+              <button data-category="automobile">
+                Start enquiry <span>↗</span>
+              </button>
+            </article>
+            <article>
+              <div class="visual">🛠️</div>
+              <div class="num">03 / TECHNICAL SUPPORT</div>
+              <h3>Technical Support &amp; Installation</h3>
+              <p>Repairs, technical troubleshooting, setup and installation.</p>
+              <button data-category="technical">
+                Start enquiry <span>↗</span>
+              </button>
+            </article>
+          </div>
+        </section>
+        <section id="process" class="process">
+          <div class="shell">
+            <div class="eyebrow">THE PROCESS</div>
+            <h2>Three simple steps.</h2>
+            <div class="steps">
+              <div>
+                <b>01</b>
+                <h3>Choose a category</h3>
+                <p>Tell us which service you need.</p>
+              </div>
+              <div>
+                <b>02</b>
+                <h3>Answer a few questions</h3>
+                <p>Questions adjust to your type of request.</p>
+              </div>
+              <div>
+                <b>03</b>
+                <h3>Continue on WhatsApp</h3>
+                <p>
+                  Get a reference and send your details to our WhatsApp
+                  Business team.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="shell closing">
+          <div>
+            <div class="eyebrow">SANTI WILLZ SERVICES</div>
+            <h2>Have a question?</h2>
+            <p>
+              We're ready to discuss your request, availability and next steps.
+            </p>
+          </div>
+          <a class="primary" href="https://wa.me/2348051816985"
+            >Chat on WhatsApp ↗</a
+          >
+        </section>
+      </main>
+      <footer>
+        <div class="shell">
+          <b>Santi Willz Services</b>
+          <p>Fast Tech, precision auto, real satisfaction.</p>
+          <small
+            >Aba, Abia State · 08051816985 · wilforcezeabiam@gmail.com</small
+          >
+        </div>
+      </footer>
+      <dialog id="wizard" aria-labelledby="wizardTitle">
+        <div class="wizard">
+          <div class="top">
+            <div>
+              <div class="eyebrow">GUIDED SERVICE ENQUIRY</div>
+              <h2 id="wizardTitle">Tell us what you need</h2>
+            </div>
+            <button id="exit" aria-label="Close">✕</button>
+          </div>
+          <div class="progress"><div id="bar"></div></div>
+          <div id="stepContent"></div>
+          <p id="feedback" role="status"></p>
+          <div class="controls">
+            <button id="back">Back</button
+            ><button id="next" class="primary">Continue →</button>
+          </div>
+          <small
+            >Your name, phone, location and enquiry are saved to handle your request. Registration is an enquiry, not a confirmed purchase. You must tap Send in
+            WhatsApp to deliver your message.</small
+          >
+        </div>
+      </dialog>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

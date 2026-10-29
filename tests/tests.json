@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Gadget purchase enquiry",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "gadget selection",
+      "adaptive purchase questions",
+      "saved order",
+      "WhatsApp handoff",
+      "original logo without RC",
+      "three category scope",
+      "registered summary locked"
+    ],
+    "description": "Registers a gadget purchase enquiry and prepares WhatsApp.",
+    "steps": [
+      "Confirm the original gold-and-black Santi Willz Services logo is visible without an RC line and only three service categories appear",
+      "Select Start enquiry for Gadgets",
+      "Choose Buy a gadget and complete model, specifications and budget",
+      "Complete customer name, WhatsApp and location",
+      "Register & open WhatsApp",
+      "Return to the website if a WhatsApp tab opens; verify Back is hidden after registration and Open WhatsApp remains available"
+    ],
+    "expected": "A unique SWS reference appears and WhatsApp opens with the order summary."
+  },
+  {
+    "name": "Automobile mobile enquiry",
+    "viewport": "mobile",
+    "covers": [
+      "automobile category",
+      "mobile guided questions",
+      "order registration",
+      "mobile header original logo fully visible and proportional"
+    ],
+    "description": "Automobile sourcing uses automobile-specific questions.",
+    "steps": [
+      "At mobile width, verify the full Santi Willz Services logo is visible, centered vertically, and not compressed or clipped by the WhatsApp link",
+      "Select Automobile",
+      "Choose Source a vehicle and answer three questions",
+      "Complete contact details and register"
+    ],
+    "expected": "A saved order reference is displayed and WhatsApp handoff is offered. The full original logo is legible without distortion or clipping in the mobile header."
+  },
+  {
+    "name": "Required answers guardrail",
+    "viewport": "desktop",
+    "covers": [
+      "required selection validation",
+      "incomplete order prevention",
+      "phone digit validation"
+    ],
+    "description": "Blank answers cannot advance the wizard.",
+    "steps": [
+      "Open Technical Support enquiry",
+      "Try Continue without choosing a request",
+      "Choose Installation then try Continue with blank answers",
+      "Complete Installation answers, go to contact details, enter ------- as the phone and attempt Continue"
+    ],
+    "expected": "Validation guidance appears and the wizard does not register an incomplete enquiry."
+  },
+  {
+    "name": "Technical repair guided enquiry",
+    "viewport": "mobile",
+    "covers": [
+      "technical support adaptive questions",
+      "contact validation",
+      "WhatsApp summary"
+    ],
+    "description": "Technical repair path requests fault details and a valid contact number.",
+    "steps": [
+      "Open Technical Support and choose Repair / troubleshooting",
+      "Fill equipment, fault and urgency",
+      "Enter valid contact information and register"
+    ],
+    "expected": "The order reference is displayed and the WhatsApp message includes the fault details."
+  },
+  {
+    "name": "Registration failure and retry",
+    "viewport": "desktop",
+    "covers": [
+      "registration failure feedback",
+      "retry-safe registration"
+    ],
+    "description": "Failed registration keeps answers and allows retry without a false success.",
+    "qa_faults": [
+      {
+        "method": "POST",
+        "path": "/api/orders",
+        "status": 500,
+        "body_json": {
+          "error": "simulated_failure"
+        }
+      }
+    ],
+    "steps": [
+      "Start a Gadgets purchase enquiry and complete every field with test details",
+      "Submit registration"
+    ],
+    "expected": "A visible registration error appears, answers remain on the review screen, and the registration button is enabled for retry. No success reference or WhatsApp success claim is displayed."
+  }
+]
